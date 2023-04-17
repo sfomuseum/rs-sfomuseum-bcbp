@@ -92,7 +92,7 @@ And then load the WASM binary in a webpage like this:
 
 And then if you load that web page in a browser and parse the string `M1DESMARAIS/LUC       EABC123 YULFRAAC 0834 326J001A0025 100` you should see something like this:
 
-![](docs/image/rs-sfomuseum-bcbp.png)
+![](docs/images/rs-sfomuseum-bcbp.png)
 
 ## See also
 
