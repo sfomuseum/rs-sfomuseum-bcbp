@@ -1,0 +1,16 @@
+[package]
+name = "rs-bcbp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+iata_bcbp = "1.0"
+wasm-bindgen = "0.2"
+arrayvec = "0.4"
+js-sys = "0.3.61"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
