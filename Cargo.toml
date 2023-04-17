@@ -1,5 +1,8 @@
 [package]
-name = "rs-bcbp"
+name = "rs-sfomuseum-bcbp"
+description = "SFO Museum-specific Rust-based WebAssembly (WASM) binary wrapping the `martinmroz/iata_bcbp` crate."
+repository = "https://github.com/sfomuseum/rs-sfomuseum-bcbp"
+license = "BSD-3"
 version = "0.1.0"
 edition = "2021"
 
@@ -14,3 +17,7 @@ js-sys = "0.3.61"
 [lib]
 crate-type = ["cdylib", "rlib"]
 
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
+lto = "fat"
