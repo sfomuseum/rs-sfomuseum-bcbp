@@ -4,9 +4,9 @@ SFO Museum-specific WebAssembly (WASM) binary wrapping the `martinmroz/iata_bcbp
 
 ## Important
 
-This is both a work-in-progress and a learning exercise to get familiar with Rust. Ideally the entirety of the `martinmroz/iata_bcbp` crate would be updated to expose WASM funtionality but this looks like it will be an involved project. In the meantime this exists.
+This is both a work-in-progress and a learning exercise to get familiar with Rust. Ideally the entirety of the `martinmroz/iata_bcbp` crate would be updated to expose WASM funtionality but this looks like it will be an involved project. In the meantime this exists. It does _not_ return all of the data produced by the `martinmroz/iata_bcbp` crate but rather a list of truncated data for each leg of a flight.
 
-It does _not_ return all of the data produced by the `martinmroz/iata_bcbp` crate but rather a list of truncated data for each leg of a flight.
+The motivation for this package is to be able to extract basic flight data and non-personally-identifiable-information from the values encoded in the barcodes on boarding passes and to so locally in a web browser so that some reasonable assurances can be made about not snooping on or hoovering up or sending over the wire all that other personally-identifiable-information stored in those barcodes. 
 
 ## Building
 
