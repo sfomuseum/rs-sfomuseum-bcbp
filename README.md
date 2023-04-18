@@ -1,6 +1,6 @@
 # rs-sfomuseum-bcbp
 
-SFO Museum-specific Rust-based WebAssembly (WASM) binary wrapping the `martinmroz/iata_bcbp` crate.
+SFO Museum-specific WebAssembly (WASM) binary wrapping the `martinmroz/iata_bcbp` (Rust) crate.
 
 ## Important
 
