@@ -1,0 +1,61 @@
+<html>
+    <head>
+	<title>barcode</title>
+    </head>
+    <body>
+	<form>
+	    <input type="text" id="barcode" disabled="disabled" />
+	    <button type="submit" id="submit" disabled="disabled">Scan</button>
+	</form>
+	<ul id="legs">
+	</ul>
+    </body>
+    <script type="module">
+
+     import init, { parse } from './rs_sfomuseum_bcbp.js';
+
+     async function main() {
+            await init();
+
+	 var barcode_el = document.getElementById("barcode");	    
+	 var submit_el = document.getElementById("submit");
+	 var legs_el = document.getElementById("legs");	 
+
+	 barcode_el.removeAttribute("disabled");	    
+	 submit_el.removeAttribute("disabled");
+	 
+	 submit_el.onclick = function(e){
+
+	     legs_el.innerHTML = "";
+
+	     try {
+		 
+		 let raw = barcode.value;
+		 let rsp = parse(raw);
+		 let count = rsp.length;
+	     
+		 for (var i=0; i < count; i++){
+		     
+		     var item = document.createElement("li");
+		     item.appendChild(document.createTextNode(rsp[i].string()));
+		 }
+		 
+		 legs_el.appendChild(item);
+		 
+	     } catch(err){
+
+		 var item = document.createElement("li");
+		 item.appendChild(document.createTextNode(err));
+		 legs_el.appendChild(item);		 
+		 console.log(err);
+	     };
+	     
+	     return false;
+	 };
+	 
+     }
+     
+     main();
+
+    </script>
+</html>
