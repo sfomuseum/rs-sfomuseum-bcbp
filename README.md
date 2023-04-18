@@ -47,4 +47,5 @@ And then if you open `http://localhost:8080` in a browser, enter the string `M1D
 ## See also
 
 * https://github.com/martinmroz/iata_bcbp
+* https://github.com/sfomuseum/rs-rxing-wasm
 * https://rustwasm.github.io/wasm-pack/
